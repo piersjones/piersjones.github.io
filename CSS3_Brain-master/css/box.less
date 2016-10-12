@@ -1,0 +1,97 @@
+@boxWidth: @containerWidth;
+@boxHeight: 20px;
+@boxDepth: @boxWidth;
+@boxBorder: 1px;
+@fontSize: 14px;
+
+.box_container {
+    width: @boxWidth;
+    height: @boxHeight;
+    position: relative;
+    margin-top: 40px;
+    z-index:-1;
+}
+
+#box {
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    .preserve3D();
+    .translateZ(-@boxDepth/2);
+    .transition(1s);
+
+    figure{
+        display: block;
+        position: absolute;
+        border: @boxBorder solid @darker;
+
+        line-height: @boxHeight - 2*@boxBorder;
+        font-size: @fontSize;
+        color: @colorText;
+        margin: 0px;
+    }
+
+    .front,
+    .back{
+        width: @boxWidth - 2*@boxBorder;
+        height: @boxHeight - 2*@boxBorder;
+    }
+
+    .right,
+    .left{
+        width: @boxDepth - 2*@boxBorder;
+        height: @boxHeight - 2*@boxBorder;
+        left: (@boxWidth - @boxDepth)/2;
+    }
+
+    .top,
+    .bottom{
+        width: @boxWidth - 2*@boxBorder;
+        height: @boxDepth - 2*@boxBorder;
+        top: (@boxHeight - @boxDepth)/2;
+    }
+
+    .front  {.rotateAndTranslate(0deg,0deg,@boxDepth/2);}
+    .back   {.rotateAndTranslate(-180deg,0deg,@boxDepth/2);}
+    .right  {.rotateAndTranslate(0deg,90deg,@boxWidth/2);}
+    .left   {.rotateAndTranslate(0deg,-90deg,@boxWidth/2);}
+    .top    {.rotateAndTranslate(90deg,0deg,@boxHeight/2);}
+    .bottom {.rotateAndTranslate(-90deg,0deg,@boxHeight/2);}
+
+    .front  { background: @dark; }
+    .back   { background: @dark; }
+    .right  { background: @dark; }
+    .left   { background: @dark; }
+    .top    { background: @light; }
+    .bottom { background: @light; }
+
+}
+
+#box.show-front  { -webkit-transform: translateZ(  -@boxDepth/2 ) rotateY(    0deg ); }
+#box.show-back   { -webkit-transform: translateZ(  -@boxDepth/2 ) rotateX( -180deg ); }
+#box.show-right  { -webkit-transform: translateZ( -@boxWidth/2 ) rotateY(  -90deg ); }
+#box.show-left   { -webkit-transform: translateZ( -@boxWidth/2 ) rotateY(   90deg ); }
+#box.show-top    { -webkit-transform: translateZ( -@boxHeight/2 ) rotateX(  -90deg ); }
+#box.show-bottom { -webkit-transform: translateZ( -@boxHeight/2 ) rotateX(   90deg ); }
+
+.title{
+    float: left;
+    padding-left:10px
+}
+
+.tags{
+    float: right;
+    position:relative;
+}
+
+.tag{
+    display:inline-block;
+    padding-right:10px;
+
+    &:hover{
+        background: @darker;
+    }
+}
+

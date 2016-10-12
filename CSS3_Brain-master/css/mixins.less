@@ -1,0 +1,47 @@
+.rotateAndTranslate (@rotX, @rotY, @transZ){
+    -webkit-transform: rotateX(@rotX) rotateY(@rotY) translateZ(@transZ);
+    -moz-transform: rotateX(@rotX) rotateY(@rotY) translateZ(@transZ);
+    -o-transform: rotateX(@rotX) rotateY(@rotY) translateZ(@transZ);
+    transform: rotateX(@rotX) rotateY(@rotY) translateZ(@transZ);
+}
+
+.transition (@time){
+    -webkit-transition: -webkit-transform @time linear;
+    -moz-transition: -moz-transform @time linear;
+    -o-transition: -o-transform @time linear;
+    transition: transform @time linear;
+}
+
+.translateZ (@height){
+    -webkit-transform: translateZ(@height);
+    -moz-transform: translateZ(@height);
+    -o-transform: translateZ(@height);
+    transform: translateZ(@height);
+}
+
+.preserve3D{
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.perspective (@depth){
+    -webkit-perspective: @depth;
+    -moz-perspective: @depth;
+    -o-perspective: @depth;
+    perspective: @depth;
+}
+
+.perspectiveOrigin (@top, @left){
+    -webkit-perspective-origin: @top @left;
+    -moz-perspective-origin: @top @left;
+    -o-perspective-origin: @top @left;
+    perspective-origin: @top @left;
+}
+
+.border (@color: @darker, @width:1px){
+	border-style: solid;
+	border-color: @color;
+	border-width: @width;
+}
