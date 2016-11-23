@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'helvetica-neue';
+  src: url('HelveticaNeueLTStd-LtCn.otf');
+}
+
+@font-face {
+  font-family: 'AvantGarde';
+  src: url('ITCAvantGardeStd-Bk.otf');
+}
+
+@font-face {
+  font-family: 'AvantGarde-cn';
+  src: url('ITCAvantGardeStd-BkCn.otf');
+}
+
+@font-face {
+  font-family: 'AvantGarde-demi';
+  src: url('ITCAvantGardeStd-Demi.otf');
+}
+
+@font-face {
+  font-family: 'AvantGarde-demi-cn';
+  src: url('ITCAvantGardeStd-DemiCn.otf');
+}
+
+@font-face {
+  font-family: 'AvantGarde-bold-cn';
+  src: url('ITCAvantGardeStd-BoldCn.otf');
+}
+
+@font-face {
+  font-family: 'AvantGarde-md';
+  src: url('ITCAvantGardeStd-Md.otf');
+}
+
+@font-face {
+  font-family: 'arial-narrow';
+  src: url('Arial Narrow.ttf');
+}
+
+@font-face {
+  font-family: 'arial-narrow-bold';
+  src: url('Arial Narrow Bold.ttf');
+}
