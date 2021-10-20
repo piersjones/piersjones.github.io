@@ -65,6 +65,44 @@
     padding: 10px;
 }
 
+.counselorwarning {
+    word-break:normal;
+    word-wrap: break-word;
+    color: #000;
+    margin-top: 10px;
+    background: #E3C0C0;
+    padding: 10px;
+}
+
+.mgcbox {
+    word-break:normal;
+    word-wrap: break-word;
+    color: #000;
+    margin-top: 10px;
+    background: #f7ef9b;
+    padding: 10px;
+}
+
+.inline {
+    display: inline;
+}
+
+.mgcbox .link-button {
+  background: none;
+  border: none;
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 1em;
+  padding: 0;
+}
+.mgcbox .link-button:focus {
+  outline: none;
+}
+.mgcbox .link-button:active {
+  color:red;
+}
+
 #tags {
     margin-top: 15px;
 }
@@ -113,7 +151,8 @@
 }
 
 .ui-slider-horizontal {
-    width: 110px;
+    /*width: 60px;*/
+    width: 105px;
     float: left;
     margin: 5px 16px;
 }
@@ -137,7 +176,14 @@
     margin-right: 5px;
 }
 
+/* this is probably obsolete by the one below, but hope to retro fix some reports */
 a.ui-slider-handle.ui-state-default.ui-corner-all {
+    font-size: 12px;
+    font-weight: normal;
+    height: auto;
+    cursor: pointer;
+}
+.ui-slider-handle.ui-state-default.ui-corner-all {
     font-size: 12px;
     font-weight: normal;
     height: auto;
@@ -212,7 +258,7 @@ a.ui-slider-handle.ui-state-default.ui-corner-all {
 
 .topnav {
     position: fixed;
-    width: 100%;
+    /*width: 100%;*/
     top:0;
     left: 0;
     z-index: 5;
@@ -257,9 +303,9 @@ a.ui-slider-handle.ui-state-default.ui-corner-all {
 }
 
 .navbar .btn-default:hover, .navbar .btn-default:focus {
-				outline: none;
-				background: #1976D2;
-			    }
+    outline: none;
+    background: #1976D2;
+}
 
 #btn-toggle-controls {
     padding: 9px 12px;
@@ -380,19 +426,26 @@ body {
 
 
 .noRepute:hover, .badRepute:hover, .goodRepute:hover, .badRepute_cb:hover, .goodRepute_cb:hover {
-									       box-shadow: 0 1px 3px #bbb;
-									   }
+    box-shadow: 0 1px 3px #bbb;
+}
 
 #controls {
     padding: 1em;
     background: #efefef;
-    display: none
+    left:auto !important;
+
+
 }
 
 .controls-wrapper {
     position: relative;
     margin: 15px;
     width: auto;
+
+}
+
+table#table_pgx > tbody > tr td:nth-child(2){
+    width: 30%;
 }
 
 #footerBox {
@@ -404,65 +457,74 @@ body {
 }
 
 .introjs-helperLayer, .introjs-tooltipReferenceLayer, .introjs-tooltipReferenceLayer *
-						       {
-							   box-sizing: content-box;
-						       }
+{
+    box-sizing: content-box;
+}
 
 /* Media queries ====================================================================== */
+@media (max-width: 767px) {
+    .topnav .navbar-brand{
+        font-size: 90%;
+    }
+    .ui-slider-horizontal {
+        width: 85px;
+    }
 
+}
 @media (min-width: 768px) {
 
     .navbar {
-	padding: 0;
+        padding: 0;
     }
     .container.main {
-	margin-top: 70px;
+        margin-top: 70px;
     }
 
     .controls-wrapper {
-	position: absolute;
-	width: 33.33%;
-	top: 10px;
-	right: 15px;
-	left: auto;
-	border: 0;
-	font-size: .85em;
-	margin: 0;
+        position: absolute;
+        width: 33.33%;
+        top: 120px;
+        right: 15px;
+        left: auto;
+        border: 0;
+        font-size: .85em;
+        margin: 0;
     }
 
-    #controls {
-        position: fixed;
-        width: 35.33%;
-    }
+
 
     .ui-slider-horizontal {
-    	width: 60px;
+        width: 105px;
     }
 
     #content {
-    	width: 400px;
-    	left: 50%;
+        width: 400px;
+        left: 50%;
     }
     #help {
-    	left: -50%;
+        left: -50%;
     }
 }
 
 @media (min-width: 992px) {
     .controls-wrapper {
-	width: 33.33%;
-	font-size: 1em;
-	z-index: 10;
+        width: 33.33%;
+        font-size: 1em;
+        z-index: 10;
     }
-    #controls {
-	width: 29.33%;
-    }
+
     .ui-slider-horizontal {
-    	width: 110px;
+        width: 105px;
     }
-    #controls.introjs-fixParent {
-	width: 90%;
+
+}
+
+@media (min-width: 1200px) {
+
+    .ui-slider-horizontal {
+        width: 105px;
     }
+
 }
 
 @page {
@@ -487,7 +549,56 @@ body {
         width: 216mm;
         height: 279mm;
     }
+    .rstext {
+	opacity: 0.5;
+    }
+    .clinvar-label {
+	opacity: 0.5;
+    }
     #footerBox {
         display: none;
     }
 }
+
+.ct-series-a .ct-bar {
+    stroke: #CD853F;
+    opacity: 0.2;
+}
+
+.ct-series-b .ct-bar {
+    stroke: #30FF30;
+    opacity: 0.2;
+}
+
+.ct-series-c .ct-bar {
+    stroke: #0000FF;
+    opacity: 0.2;
+}
+
+.ct-bar {
+    stroke-width: 7px;
+}
+
+.ct-series-a-active .ct-bar {
+#    stroke: #CD853F;
+    stroke: #000000;
+}
+
+.ct-series-b-active .ct-bar {
+#    stroke: #30FF30;
+    stroke: #000000;
+}
+
+.ct-series-c-active .ct-bar {
+#    stroke: #0000FF;
+    stroke: #000000;
+}
+
+/*-----------------Customize Populations Popup-------------------------------*/
+#lst_populations { list-style-type: none; margin: 0; padding: 0; /*width: 60%;*/ }
+#lst_populations li { margin: 0 5px 5px 5px; padding: 5px; font-size: 1.2em; cursor: move; /*height: 1.5em;*/ }
+#lst_populations li > label{
+    margin-left: 5px;
+}
+.ui-state-highlight { height: 1.5em; line-height: 1.2em; }
+/*--------------------------------------------------------------------------*/

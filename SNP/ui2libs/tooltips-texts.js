@@ -1,9 +1,11 @@
 var tooltipsTexts={};
 
+tooltipsTexts["pscore"]="Does the call rate for this platform match the expected rate based on sequencing?";
 tooltipsTexts["Magnitude"]="Magnitude is a subjective measure of interest. Over time it should be adjusted up or down by the community";
 tooltipsTexts["Repute"]="Either Good, Bad, or blank";
 tooltipsTexts["CLNSIG"]="The significance of the position (but not necessarily your genotype) according to ClinVar";
 tooltipsTexts["Frequency"]="How common is this genotype in your chosen nearest populations (ie Caucasian or Japanese)";
+tooltipsTexts["PopFreqGraph"]="Black indicates how common your genotype is among other populations. More info at https://www.SNPedia.com/index.php/PopFreqGraph";
 tooltipsTexts["GMAF"]="The frequency of the minor allele in the 1000 Genomes Project";
 tooltipsTexts["Count"]="How many times this genotype was seen int your data";
 tooltipsTexts["Gene"]="HUGO Name of the gene";

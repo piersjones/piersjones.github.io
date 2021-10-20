@@ -4,6 +4,7 @@
 
 .tooltip.in {
     opacity: 1;
+    z-index: 9999999;
 }
 
 .tooltip-inner {
